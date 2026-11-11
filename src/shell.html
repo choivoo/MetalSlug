@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#000000">
+<title>철갑돌격대 — 작전명: 까마귀 사냥</title>
+<style>
+html,body{margin:0;height:100%;background:#000;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;overscroll-behavior:none}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+body.portrait #wrap{align-items:flex-start;padding-top:9vh}
+canvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges}
+#ui{position:fixed;inset:0;font:bold 4.6vmin sans-serif;color:#fff;pointer-events:none}
+#stickzone,#stick,.btn{display:none}
+body.playing #stickzone{display:block;position:absolute;left:0;top:14%;width:50%;bottom:0;pointer-events:auto}
+body.playing #stick{display:block;position:absolute;left:17vmin;top:calc(100% - 22vmin);width:30vmin;height:30vmin;margin:-15vmin 0 0 -15vmin;border-radius:50%;border:.7vmin solid rgba(255,255,255,.28);background:rgba(255,255,255,.07);box-sizing:border-box;opacity:.75}
+#stick.on{opacity:1}
+#knob{position:absolute;left:50%;top:50%;width:13vmin;height:13vmin;margin:-6.5vmin;border-radius:50%;background:rgba(255,255,255,.42)}
+body.playing .btn{display:flex;position:absolute;align-items:center;justify-content:center;border-radius:50%;border:.7vmin solid rgba(255,255,255,.4);box-sizing:border-box;pointer-events:auto;text-shadow:0 0 .8vmin #000}
+#bFire{right:calc(4vmin + env(safe-area-inset-right));bottom:7vmin;width:27vmin;height:27vmin;background:rgba(232,60,50,.38)}
+#bJump{right:calc(33vmin + env(safe-area-inset-right));bottom:4vmin;width:22vmin;height:22vmin;background:rgba(60,120,240,.38)}
+#bGren{right:calc(7vmin + env(safe-area-inset-right));bottom:37vmin;width:19vmin;height:19vmin;background:rgba(70,190,90,.38)}
+.btn.on{filter:brightness(1.7);transform:scale(.94)}
+#bFs{position:absolute;right:1.5vmin;top:1.5vmin;padding:1vmin 2vmin;font-size:3vmin;border:.4vmin solid rgba(255,255,255,.35);border-radius:1.5vmin;background:rgba(0,0,0,.35);pointer-events:auto;opacity:.6}
+body.playing #bFs,:fullscreen #bFs{display:none}
+@media (pointer:fine){#bFs{display:none}}
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="game" width="1920" height="1080"></canvas></div>
+<div id="ui">
+  <div id="stickzone"></div>
+  <div id="stick"><div id="knob"></div></div>
+  <div class="btn" id="bFire">사격</div>
+  <div class="btn" id="bJump">점프</div>
+  <div class="btn" id="bGren">폭탄</div>
+  <div id="bFs">전체화면</div>
+</div>
+<script>
+/*__JS__*/
+</script>
+</body>
+</html>
